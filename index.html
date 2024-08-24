@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Rental System</h1>
+        </header>
+        
+        <section class="car-list">
+            <h2>Available Cars</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Car ID</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Price per Day</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content from Java or JavaScript would populate this -->
+                    <tr>
+                        <td>C001</td>
+                        <td>Toyota</td>
+                        <td>Camry</td>
+                        <td>$60.00</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Honda</td>
+                        <td>Accord</td>
+                        <td>$70.00</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Mahindra</td>
+                        <td>Thar</td>
+                        <td>$150.00</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="rental-form">
+            <h2>Rent a Car</h2>
+            <form id="rentForm">
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+                
+                <label for="carId">Select Car ID:</label>
+                <select id="carId" name="carId" required>
+                    <option value="C001">C001 - Toyota Camry</option>
+                    <option value="C002">C002 - Honda Accord</option>
+                    <option value="C003">C003 - Mahindra Thar</option>
+                </select>
+
+                <label for="rentalDays">Number of Days:</label>
+                <input type="number" id="rentalDays" name="rentalDays" required min="1">
+
+                <button type="submit">Rent Car</button>
+            </form>
+        </section>
+
+        <section class="return-form">
+            <h2>Return a Car</h2>
+            <form id="returnForm">
+                <label for="returnCarId">Car ID:</label>
+                <input type="text" id="returnCarId" name="returnCarId" required>
+
+                <button type="submit">Return Car</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
+
